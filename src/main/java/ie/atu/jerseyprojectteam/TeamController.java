@@ -16,6 +16,7 @@ public class TeamController {
 
     @GetMapping("/region/{regionId}")
     public List<Teams> getTeamsByRegion(@PathVariable Long regionId){
-        return teamRepository.findByRegionId(regionId);
+        List<Teams> teams = teamRepository.findByRegionId(regionId);
+        return teams;
     }
 }
